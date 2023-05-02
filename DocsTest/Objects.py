@@ -1,6 +1,7 @@
 import typing
 
-class BaseObject():
+
+class BaseObject:
     """
     BaseObject class represents a basic 3D object with various attributes.
 
@@ -26,9 +27,24 @@ class BaseObject():
                              scale_x=1.0, scale_y=1.0, scale_z=1.0)
     """
 
-    def __init__(self, name=None, type=None, age=None, missing_age=None, position_x=None, position_y=None, position_z=None, rotation_x=None, rotation_y=None, rotation_z=None, scale_x=None, scale_y=None, scale_z=None) -> None:
+    def __init__(
+        self,
+        name=None,
+        object_type=None,
+        age=None,
+        missing_age=None,
+        position_x=None,
+        position_y=None,
+        position_z=None,
+        rotation_x=None,
+        rotation_y=None,
+        rotation_z=None,
+        scale_x=None,
+        scale_y=None,
+        scale_z=None,
+    ) -> None:
         self.name = name
-        self.type = type
+        self.object_type = object_type
         self.age = age
         self.missing_age = missing_age
         self.position_x = position_x
@@ -40,8 +56,8 @@ class BaseObject():
         self.scale_x = scale_x
         self.scale_y = scale_y
         self.scale_z = scale_z
-    
-    def update(self, parameters: typing.Dict[str, typing.Any]) -> None: 
+
+    def update(self, parameters: typing.Dict[str, typing.Any]) -> None:
         """
         Update the object with the given parameters. The parameters should be a dictionary containing the
         specified keys and their corresponding types.
@@ -58,7 +74,7 @@ class BaseObject():
         Examples:
             >>> parameters = {
                     'name': 'test',
-                    'type': 'test',
+                    'object_type': 'test',
                     'age': 1,
                     'missing_age': 1,
                     'position_x': 1,
@@ -75,29 +91,34 @@ class BaseObject():
 
             >>> parameters = {
                     'name': 'test',
-                    'type': 'test',
+                    'object_type': 'test',
                 }
             >>> object.update(parameters)
         """
 
         for key, value in parameters.items():
-            if key == 'name' or key == "type":
+            if key in ("name", "object_type"):
                 if not isinstance(value, str):
-                    raise ValueError('{key} should be a string')
+                    raise ValueError("{key} should be a string")
             else:
                 if not isinstance(value, (int, float)):
-                    raise ValueError(f'{key} should be a number')
+                    raise ValueError(f"{key} should be a number")
 
-        self.name = parameters.get('name', self.name)
-        self.type = parameters.get('type', self.type)
-        self.age = parameters.get('age', self.age)
-        self.missing_age = parameters.get('missing_age', self.missing_age)
-        self.position_x = parameters.get('position_x', self.position_x)
-        self.position_y = parameters.get('position_y', self.position_y)
-        self.position_z = parameters.get('position_z', self.position_z)
-        self.rotation_x = parameters.get('rotation_x', self.rotation_x)
-        self.rotation_y = parameters.get('rotation_y', self.rotation_y)
-        self.rotation_z = parameters.get('rotation_z', self.rotation_z)
-        self.scale_x = parameters.get('scale_x', self.scale_x)
-        self.scale_y = parameters.get('scale_y', self.scale_y)
-        self.scale_z = parameters.get('scale_z', self.scale_z)
+        self.name = parameters.get("name", self.name)
+        self.object_type = parameters.get("object_type", self.object_type)
+        self.age = parameters.get("age", self.age)
+        self.missing_age = parameters.get("missing_age", self.missing_age)
+        self.position_x = parameters.get("position_x", self.position_x)
+        self.position_y = parameters.get("position_y", self.position_y)
+        self.position_z = parameters.get("position_z", self.position_z)
+        self.rotation_x = parameters.get("rotation_x", self.rotation_x)
+        self.rotation_y = parameters.get("rotation_y", self.rotation_y)
+        self.rotation_z = parameters.get("rotation_z", self.rotation_z)
+        self.scale_x = parameters.get("scale_x", self.scale_x)
+        self.scale_y = parameters.get("scale_y", self.scale_y)
+        self.scale_z = parameters.get("scale_z", self.scale_z)
+
+    def predict(self):
+        """To be added
+        """
+        raise NotImplementedError("Will be added later")
