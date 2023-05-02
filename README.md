@@ -2,6 +2,8 @@
 
 PackageCreationTutorial is a Python package designed to teach you how to create a package and document it using Sphinx. This example package demonstrates best practices for package structure, code organization, and documentation with Sphinx.
 
+https://docstest-from-sezer-muhammed.readthedocs.io/en/latest/index.html
+
 ## What you'll learn
 
 - How to structure and organize your Python package.
