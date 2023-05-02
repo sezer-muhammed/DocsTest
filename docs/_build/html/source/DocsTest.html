@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DocsTest package &mdash; DocsTest 2023 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DocsTest
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">DocsTest package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-DocsTest.Objects">DocsTest.Objects module</a><ul>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject"><code class="docutils literal notranslate"><span class="pre">BaseObject</span></code></a><ul>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject.name"><code class="docutils literal notranslate"><span class="pre">BaseObject.name</span></code></a></li>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject.type"><code class="docutils literal notranslate"><span class="pre">BaseObject.type</span></code></a></li>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject.age"><code class="docutils literal notranslate"><span class="pre">BaseObject.age</span></code></a></li>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject.missing_age"><code class="docutils literal notranslate"><span class="pre">BaseObject.missing_age</span></code></a></li>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject.position_x"><code class="docutils literal notranslate"><span class="pre">BaseObject.position_x</span></code></a></li>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject.position_y"><code class="docutils literal notranslate"><span class="pre">BaseObject.position_y</span></code></a></li>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject.position_z"><code class="docutils literal notranslate"><span class="pre">BaseObject.position_z</span></code></a></li>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject.rotation_x"><code class="docutils literal notranslate"><span class="pre">BaseObject.rotation_x</span></code></a></li>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject.rotation_y"><code class="docutils literal notranslate"><span class="pre">BaseObject.rotation_y</span></code></a></li>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject.rotation_z"><code class="docutils literal notranslate"><span class="pre">BaseObject.rotation_z</span></code></a></li>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject.scale_x"><code class="docutils literal notranslate"><span class="pre">BaseObject.scale_x</span></code></a></li>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject.scale_y"><code class="docutils literal notranslate"><span class="pre">BaseObject.scale_y</span></code></a></li>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject.scale_z"><code class="docutils literal notranslate"><span class="pre">BaseObject.scale_z</span></code></a></li>
+<li><a class="reference internal" href="#DocsTest.Objects.BaseObject.update"><code class="docutils literal notranslate"><span class="pre">BaseObject.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-DocsTest.Optimizer">DocsTest.Optimizer module</a></li>
+<li><a class="reference internal" href="#module-DocsTest.Tracker">DocsTest.Tracker module</a></li>
+<li><a class="reference internal" href="#module-DocsTest">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DocsTest</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">DocsTest package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/source/DocsTest.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="docstest-package">
+<h1>DocsTest package<a class="headerlink" href="#docstest-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-DocsTest.Objects">
+<span id="docstest-objects-module"></span><h2>DocsTest.Objects module<a class="headerlink" href="#module-DocsTest.Objects" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">DocsTest.Objects.</span></span><span class="sig-name descname"><span class="pre">BaseObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">age</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">missing_age</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position_x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position_z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation_x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation_z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#DocsTest.Objects.BaseObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>BaseObject class represents a basic 3D object with various attributes.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#DocsTest.Objects.BaseObject.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unique name for the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject.type">
+<span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#DocsTest.Objects.BaseObject.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type or category the object belongs to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject.age">
+<span class="sig-name descname"><span class="pre">age</span></span><a class="headerlink" href="#DocsTest.Objects.BaseObject.age" title="Permalink to this definition">¶</a></dt>
+<dd><p>The age of the object, represented as an integer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject.missing_age">
+<span class="sig-name descname"><span class="pre">missing_age</span></span><a class="headerlink" href="#DocsTest.Objects.BaseObject.missing_age" title="Permalink to this definition">¶</a></dt>
+<dd><p>The missing age of the object, represented as an integer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject.position_x">
+<span class="sig-name descname"><span class="pre">position_x</span></span><a class="headerlink" href="#DocsTest.Objects.BaseObject.position_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>The x-coordinate of the object’s position in 3D space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject.position_y">
+<span class="sig-name descname"><span class="pre">position_y</span></span><a class="headerlink" href="#DocsTest.Objects.BaseObject.position_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>The y-coordinate of the object’s position in 3D space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject.position_z">
+<span class="sig-name descname"><span class="pre">position_z</span></span><a class="headerlink" href="#DocsTest.Objects.BaseObject.position_z" title="Permalink to this definition">¶</a></dt>
+<dd><p>The z-coordinate of the object’s position in 3D space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject.rotation_x">
+<span class="sig-name descname"><span class="pre">rotation_x</span></span><a class="headerlink" href="#DocsTest.Objects.BaseObject.rotation_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>The x-coordinate of the object’s rotation in 3D space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject.rotation_y">
+<span class="sig-name descname"><span class="pre">rotation_y</span></span><a class="headerlink" href="#DocsTest.Objects.BaseObject.rotation_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>The y-coordinate of the object’s rotation in 3D space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject.rotation_z">
+<span class="sig-name descname"><span class="pre">rotation_z</span></span><a class="headerlink" href="#DocsTest.Objects.BaseObject.rotation_z" title="Permalink to this definition">¶</a></dt>
+<dd><p>The z-coordinate of the object’s rotation in 3D space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject.scale_x">
+<span class="sig-name descname"><span class="pre">scale_x</span></span><a class="headerlink" href="#DocsTest.Objects.BaseObject.scale_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scaling factor for the object’s size along the x-axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject.scale_y">
+<span class="sig-name descname"><span class="pre">scale_y</span></span><a class="headerlink" href="#DocsTest.Objects.BaseObject.scale_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scaling factor for the object’s size along the y-axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject.scale_z">
+<span class="sig-name descname"><span class="pre">scale_z</span></span><a class="headerlink" href="#DocsTest.Objects.BaseObject.scale_z" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scaling factor for the object’s size along the z-axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj</span> <span class="o">=</span> <span class="n">BaseObject</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Cube&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;Geometry&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">missing_age</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="go">                     position_x=0.0, position_y=0.0, position_z=0.0,</span>
+<span class="go">                     rotation_x=0.0, rotation_y=0.0, rotation_z=0.0,</span>
+<span class="go">                     scale_x=1.0, scale_y=1.0, scale_z=1.0)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="DocsTest.Objects.BaseObject.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#DocsTest.Objects.BaseObject.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the object with the given parameters. The parameters should be a dictionary containing the
+specified keys and their corresponding types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>parameters</strong> (<em>dict</em>) – A dictionary with the keys same name with attributes of the object and their corresponding types.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – If the value of a key is not the correct type.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
+<span class="go">        &#39;name&#39;: &#39;test&#39;,</span>
+<span class="go">        &#39;type&#39;: &#39;test&#39;,</span>
+<span class="go">        &#39;age&#39;: 1,</span>
+<span class="go">        &#39;missing_age&#39;: 1,</span>
+<span class="go">        &#39;position_x&#39;: 1,</span>
+<span class="go">        &#39;position_y&#39;: 1,</span>
+<span class="go">        &#39;position_z&#39;: 1,</span>
+<span class="go">        &#39;rotation_x&#39;: 1,</span>
+<span class="go">        &#39;rotation_y&#39;: 1,</span>
+<span class="go">        &#39;rotation_z&#39;: 1,</span>
+<span class="go">        &#39;scale_x&#39;: 1,</span>
+<span class="go">        &#39;scale_y&#39;: 1,</span>
+<span class="go">        &#39;scale_z&#39;: 1</span>
+<span class="go">    }</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">object</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
+<span class="go">        &#39;name&#39;: &#39;test&#39;,</span>
+<span class="go">        &#39;type&#39;: &#39;test&#39;,</span>
+<span class="go">    }</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">object</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-DocsTest.Optimizer">
+<span id="docstest-optimizer-module"></span><h2>DocsTest.Optimizer module<a class="headerlink" href="#module-DocsTest.Optimizer" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-DocsTest.Tracker">
+<span id="docstest-tracker-module"></span><h2>DocsTest.Tracker module<a class="headerlink" href="#module-DocsTest.Tracker" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-DocsTest">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-DocsTest" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, sezer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
