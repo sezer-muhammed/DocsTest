@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robot Framework Quick Start Guide &mdash; DocsTest 2023 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to DocsTest’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            DocsTest
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Robot Framework Quick Start Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#about-this-guide">About this guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#robot-framework-overview">Robot Framework overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#demo-application">Demo application</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#executing-this-guide">Executing this guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installations">Installations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#execution">Execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#viewing-results">Viewing results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#test-cases">Test cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#workflow-tests">Workflow tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#higher-level-tests">Higher-level tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-driven-tests">Data-driven tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#keywords">Keywords</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#library-keywords">Library keywords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-keywords">User keywords</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#variables">Variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#defining-variables">Defining variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-variables">Using variables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#organizing-test-cases">Organizing test cases</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#test-suites">Test suites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setups-and-teardowns">Setups and teardowns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-tags">Using tags</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-test-libraries">Creating test libraries</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DocsTest</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Robot Framework Quick Start Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/quickstart.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="robot-framework-quick-start-guide">
+<h1>Robot Framework Quick Start Guide<a class="headerlink" href="#robot-framework-quick-start-guide" title="Permalink to this heading">¶</a></h1>
+<p>Copyright © Nokia Networks. Licensed under the
+<a class="reference external" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported</a> license.</p>
+<nav class="contents local" id="table-of-contents">
+<p class="topic-title">Table of contents:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#introduction" id="id13">Introduction</a></p>
+<ul>
+<li><p><a class="reference internal" href="#about-this-guide" id="id14">About this guide</a></p></li>
+<li><p><a class="reference internal" href="#robot-framework-overview" id="id15">Robot Framework overview</a></p></li>
+<li><p><a class="reference internal" href="#demo-application" id="id16">Demo application</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#executing-this-guide" id="id17">Executing this guide</a></p>
+<ul>
+<li><p><a class="reference internal" href="#installations" id="id18">Installations</a></p></li>
+<li><p><a class="reference internal" href="#execution" id="id19">Execution</a></p></li>
+<li><p><a class="reference internal" href="#viewing-results" id="id20">Viewing results</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#test-cases" id="id21">Test cases</a></p>
+<ul>
+<li><p><a class="reference internal" href="#workflow-tests" id="id22">Workflow tests</a></p></li>
+<li><p><a class="reference internal" href="#higher-level-tests" id="id23">Higher-level tests</a></p></li>
+<li><p><a class="reference internal" href="#data-driven-tests" id="id24">Data-driven tests</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#keywords" id="id25">Keywords</a></p>
+<ul>
+<li><p><a class="reference internal" href="#library-keywords" id="id26">Library keywords</a></p></li>
+<li><p><a class="reference internal" href="#user-keywords" id="id27">User keywords</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#variables" id="id28">Variables</a></p>
+<ul>
+<li><p><a class="reference internal" href="#defining-variables" id="id29">Defining variables</a></p></li>
+<li><p><a class="reference internal" href="#using-variables" id="id30">Using variables</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#organizing-test-cases" id="id31">Organizing test cases</a></p>
+<ul>
+<li><p><a class="reference internal" href="#test-suites" id="id32">Test suites</a></p></li>
+<li><p><a class="reference internal" href="#setups-and-teardowns" id="id33">Setups and teardowns</a></p></li>
+<li><p><a class="reference internal" href="#using-tags" id="id34">Using tags</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#creating-test-libraries" id="id35">Creating test libraries</a></p></li>
+</ul>
+</nav>
+<section id="introduction">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
+<section id="about-this-guide">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">About this guide</a><a class="headerlink" href="#about-this-guide" title="Permalink to this heading">¶</a></h3>
+<p><em>Robot Framework Quick Start Guide</em> introduces the most important <a class="reference external" href="http://robotframework.org">Robot
+Framework</a> features. You can simply browse
+through it and look at the examples, but you can also use the guide as an
+<a class="reference internal" href="#executing-this-guide">executable demo</a>. All features shown here are explained more thoroughly
+in <a class="reference external" href="http://robotframework.org/robotframework/#user-guide">Robot Framework User Guide</a>.</p>
+</section>
+<section id="robot-framework-overview">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Robot Framework overview</a><a class="headerlink" href="#robot-framework-overview" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference external" href="http://robotframework.org">Robot Framework</a> is a generic open source test automation framework for
+acceptance testing and acceptance test-driven development (ATDD). It has
+easy-to-use tabular test data syntax and it utilizes the keyword-driven
+testing approach. Its testing capabilities can be extended by test libraries
+implemented either with Python or Java, and users can create new higher-level
+keywords from existing ones using the same syntax that is used for creating
+test cases.</p>
+<p>Robot Framework is operating system and application independent. The core
+framework is implemented using <a class="reference external" href="http://python.org">Python</a> and runs also on
+<a class="reference external" href="http://jython.org">Jython</a> (JVM) and <a class="reference external" href="http://ironpython.net">IronPython</a>
+(.NET). The framework has a rich ecosystem around it consisting of various
+generic test libraries and tools that are developed as separate projects.</p>
+<p>For more information about Robot Framework and the ecosystem, see
+<a class="reference external" href="http://robotframework.org">http://robotframework.org</a>. There you can find plenty more documentation,
+demo projects, list of available test libraries and other tools, and so on.</p>
+</section>
+<section id="demo-application">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Demo application</a><a class="headerlink" href="#demo-application" title="Permalink to this heading">¶</a></h3>
+<p>The sample application for this guide is a variation on a classic login
+example: it is a command-line based authentication server written in Python.
+The application allows a user to do three things:</p>
+<ul class="simple">
+<li><p>Create an account with a valid password.</p></li>
+<li><p>Log in with a valid user name and password.</p></li>
+<li><p>Change the password of an existing account.</p></li>
+</ul>
+<p>The application itself is in <a class="reference external" href="sut/login.py">sut/login.py</a> file and can be executed with
+a command <code class="code docutils literal notranslate"><span class="pre">python</span> <span class="pre">sut/login.py</span></code>. Attempting to log in with a non-existent
+user account or with an invalid password results in the same error message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">python</span> <span class="n">sut</span><span class="o">/</span><span class="n">login</span><span class="o">.</span><span class="n">py</span> <span class="n">login</span> <span class="n">nobody</span> <span class="n">P4ssw0rd</span>
+<span class="n">Access</span> <span class="n">Denied</span>
+</pre></div>
+</div>
+<p>After creating a user account with valid password login succeeds:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">python</span> <span class="n">sut</span><span class="o">/</span><span class="n">login</span><span class="o">.</span><span class="n">py</span> <span class="n">create</span> <span class="n">fred</span> <span class="n">P4ssw0rd</span>
+<span class="n">SUCCESS</span>
+
+<span class="o">&gt;</span> <span class="n">python</span> <span class="n">sut</span><span class="o">/</span><span class="n">login</span><span class="o">.</span><span class="n">py</span> <span class="n">login</span> <span class="n">fred</span> <span class="n">P4ssw0rd</span>
+<span class="n">Logged</span> <span class="n">In</span>
+</pre></div>
+</div>
+<p>There are two requirements that a password must fulfill to be valid: it must
+be between 7-12 characters long, and it must contain lower and upper case
+letters and numbers, but it must not contain special characters. Trying to
+create a user with invalid password fails:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">python</span> <span class="n">sut</span><span class="o">/</span><span class="n">login</span><span class="o">.</span><span class="n">py</span> <span class="n">create</span> <span class="n">fred</span> <span class="n">short</span>
+<span class="n">Creating</span> <span class="n">user</span> <span class="n">failed</span><span class="p">:</span> <span class="n">Password</span> <span class="n">must</span> <span class="n">be</span> <span class="mi">7</span><span class="o">-</span><span class="mi">12</span> <span class="n">characters</span> <span class="n">long</span>
+
+<span class="o">&gt;</span> <span class="n">python</span> <span class="n">sut</span><span class="o">/</span><span class="n">login</span><span class="o">.</span><span class="n">py</span> <span class="n">create</span> <span class="n">fred</span> <span class="n">invalid</span>
+<span class="n">Creating</span> <span class="n">user</span> <span class="n">failed</span><span class="p">:</span> <span class="n">Password</span> <span class="n">must</span> <span class="n">be</span> <span class="n">a</span> <span class="n">combination</span> <span class="n">of</span> <span class="n">lowercase</span> <span class="ow">and</span>
+<span class="n">uppercase</span> <span class="n">letters</span> <span class="ow">and</span> <span class="n">numbers</span>
+</pre></div>
+</div>
+<p>Changing password with invalid credentials results in the same error message
+as logging in with invalid credentials. The validity of new password is
+verified and if not valid, an error message is given:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">python</span> <span class="n">sut</span><span class="o">/</span><span class="n">login</span><span class="o">.</span><span class="n">py</span> <span class="n">change</span><span class="o">-</span><span class="n">password</span> <span class="n">fred</span> <span class="n">wrong</span> <span class="n">NewP4ss</span>
+<span class="n">Changing</span> <span class="n">password</span> <span class="n">failed</span><span class="p">:</span> <span class="n">Access</span> <span class="n">Denied</span>
+
+<span class="o">&gt;</span> <span class="n">python</span> <span class="n">sut</span><span class="o">/</span><span class="n">login</span><span class="o">.</span><span class="n">py</span> <span class="n">change</span><span class="o">-</span><span class="n">password</span> <span class="n">fred</span> <span class="n">P4ssw0rd</span> <span class="n">short</span>
+<span class="n">Changing</span> <span class="n">password</span> <span class="n">failed</span><span class="p">:</span> <span class="n">Password</span> <span class="n">must</span> <span class="n">be</span> <span class="mi">7</span><span class="o">-</span><span class="mi">12</span> <span class="n">characters</span> <span class="n">long</span>
+
+<span class="o">&gt;</span> <span class="n">python</span> <span class="n">sut</span><span class="o">/</span><span class="n">login</span><span class="o">.</span><span class="n">py</span> <span class="n">change</span><span class="o">-</span><span class="n">password</span> <span class="n">fred</span> <span class="n">P4ssw0rd</span> <span class="n">NewP4ss</span>
+<span class="n">SUCCESS</span>
+</pre></div>
+</div>
+<p>The application uses a simple database file to keep track on user statuses.
+The file is located in operating system dependent temporary directory.</p>
+</section>
+</section>
+<section id="executing-this-guide">
+<h2><a class="toc-backref" href="#id17" role="doc-backlink">Executing this guide</a><a class="headerlink" href="#executing-this-guide" title="Permalink to this heading">¶</a></h2>
+<p>These instructions explain how to run this guide yourself. If you are not
+interested in that, you can nevertheless <a class="reference internal" href="#viewing-results">view the results</a> online.</p>
+<section id="installations">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Installations</a><a class="headerlink" href="#installations" title="Permalink to this heading">¶</a></h3>
+<p>The recommended approach to install Robot Framework on <a class="reference external" href="http://python.org">Python</a> is using <a class="reference external" href="http://pip-installer.org">pip</a>. Once you have both of these preconditions
+installed, you can simply run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">robotframework</span>
+</pre></div>
+</div>
+<p>See <a class="reference external" href="https://github.com/robotframework/robotframework/blob/master/INSTALL.rst">Robot Framework installation instructions</a> for alternative installation
+approaches and more information about installation in general.</p>
+<p>This demo is written using <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> markup language with Robot
+Framework test data in code blocks. Executing tests in this format requires
+installing additional <a class="reference external" href="https://pypi.python.org/pypi/docutils">docutils</a> module:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">docutils</span>
+</pre></div>
+</div>
+<p>Notice that Robot Framework 3.0 is the first Robot Framework version to support
+Python 3. See the aforementioned <a class="reference external" href="https://github.com/robotframework/robotframework/blob/master/INSTALL.rst">installation instructions</a> for information
+about Python 2 vs Python 3.</p>
+</section>
+<section id="execution">
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">Execution</a><a class="headerlink" href="#execution" title="Permalink to this heading">¶</a></h3>
+<p>After installations you still need to get the demo itself. It is easiest to
+download a certain <a class="reference external" href="https://github.com/robotframework/QuickStartGuide/releases">release</a> or grab the <a class="reference external" href="https://github.com/robotframework/QuickStartGuide/archive/master.zip">latest content</a> and extract the
+package somewhere, but it is also possible to clone the <a class="reference external" href="https://github.com/robotframework/QuickStartGuide">project repository</a>.</p>
+<p>After installations and with all other preconditions in place, you can run
+the demo on the command line by using the <code class="code docutils literal notranslate"><span class="pre">robot</span></code> command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">robot</span> <span class="n">QuickStart</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
+</div>
+<p>If you use Robot Framework 2.9 or older, instead of the <code class="code docutils literal notranslate"><span class="pre">robot</span></code> command you
+need to use <code class="code docutils literal notranslate"><span class="pre">pybot</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pybot</span> <span class="n">QuickStart</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
+</div>
+<p>You can also configure the execution with various command line options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">robot</span> <span class="o">--</span><span class="n">log</span> <span class="n">custom_log</span><span class="o">.</span><span class="n">html</span> <span class="o">--</span><span class="n">name</span> <span class="n">Custom_Name</span> <span class="n">QuickStart</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
+</div>
+<p>For a list of available options run <code class="code docutils literal notranslate"><span class="pre">robot</span> <span class="pre">--help</span></code>.</p>
+</section>
+<section id="viewing-results">
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">Viewing results</a><a class="headerlink" href="#viewing-results" title="Permalink to this heading">¶</a></h3>
+<p>Running the demo generates the following three result files. These files are
+linked to pre-executed files available online, but executing the demo creates
+them locally.</p>
+<dl class="simple">
+<dt><a class="reference external" href="http://robotframework.org/QuickStartGuide/report.html">report.html</a></dt><dd><p>Higher level test report.</p>
+</dd>
+<dt><a class="reference external" href="http://robotframework.org/QuickStartGuide/log.html">log.html</a></dt><dd><p>Detailed test execution log.</p>
+</dd>
+<dt><a class="reference external" href="http://robotframework.org/QuickStartGuide/output.xml">output.xml</a></dt><dd><p>Results in machine readable XML format.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="test-cases">
+<h2><a class="toc-backref" href="#id21" role="doc-backlink">Test cases</a><a class="headerlink" href="#test-cases" title="Permalink to this heading">¶</a></h2>
+<section id="workflow-tests">
+<h3><a class="toc-backref" href="#id22" role="doc-backlink">Workflow tests</a><a class="headerlink" href="#workflow-tests" title="Permalink to this heading">¶</a></h3>
+<p>Robot Framework test cases are created using a simple tabular syntax. For
+example, the following table has two tests:</p>
+<ul class="simple">
+<li><p>User can create an account and log in</p></li>
+<li><p>User cannot log in with bad password</p></li>
+</ul>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Test Cases ***</span>
+<span class="gu">User can create an account and log in</span>
+<span class="p">    </span><span class="nf">Create Valid User</span><span class="p">    </span><span class="s">fred</span><span class="p">    </span><span class="s">P4ssw0rd</span>
+<span class="p">    </span><span class="nf">Attempt to Login with Credentials</span><span class="p">    </span><span class="s">fred</span><span class="p">    </span><span class="s">P4ssw0rd</span>
+<span class="p">    </span><span class="nf">Status Should Be</span><span class="p">    </span><span class="s">Logged In</span>
+
+<span class="gu">User cannot log in with bad password</span>
+<span class="p">    </span><span class="nf">Create Valid User</span><span class="p">    </span><span class="s">betty</span><span class="p">    </span><span class="s">P4ssw0rd</span>
+<span class="p">    </span><span class="nf">Attempt to Login with Credentials</span><span class="p">    </span><span class="s">betty</span><span class="p">    </span><span class="s">wrong</span>
+<span class="p">    </span><span class="nf">Status Should Be</span><span class="p">    </span><span class="s">Access Denied</span>
+</pre></div>
+</div>
+<p>Notice that these tests read like manual tests written in English rather
+than like automated test cases. Robot Framework uses the keyword-driven
+approach that supports writing tests that capture the essence of the actions
+and expectations in natural language.</p>
+<p>Test cases are constructed from keywords and their possible arguments. The
+syntax requires that keywords and arguments, as well as settings and their
+values, are separated by at least two spaces or by a tab character. It is
+generally recommended to use four spaces to make the separator more explicit,
+and in some cases aligning arguments or other values may make the data easier
+to understand. For more details about the syntax see <a class="reference external" href="http://robotframework.org/robotframework/#user-guide">Robot Framework User
+Guide</a>.</p>
+</section>
+<section id="higher-level-tests">
+<h3><a class="toc-backref" href="#id23" role="doc-backlink">Higher-level tests</a><a class="headerlink" href="#higher-level-tests" title="Permalink to this heading">¶</a></h3>
+<p>Test cases can also be created using only high-level keywords that take no
+positional arguments. This style allows using totally free text which is
+suitable for communication even with non-technical customers or other project
+stakeholders. This is especially important when using the <a class="reference external" href="http://en.wikipedia.org/wiki/Acceptance_test-driven_development">acceptance
+test-driven development</a> (ATDD) approach or any of its variants and created
+tests act also as requirements.</p>
+<p>Robot Framework does not enforce any particular style for writing test cases.
+One common style is the <em>given-when-then</em> format popularized by
+<a class="reference external" href="http://en.wikipedia.org/wiki/Behavior_driven_development">behavior-driven development</a> (BDD):</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Test Cases ***</span>
+<span class="gu">User can change password</span>
+<span class="p">    </span><span class="ge">Given </span><span class="nf">a user has a valid account</span>
+<span class="p">    </span><span class="ge">When </span><span class="nf">she changes her password</span>
+<span class="p">    </span><span class="ge">Then </span><span class="nf">she can log in with the new password</span>
+<span class="p">    </span><span class="ge">And </span><span class="nf">she cannot use the old password anymore</span>
+</pre></div>
+</div>
+</section>
+<section id="data-driven-tests">
+<h3><a class="toc-backref" href="#id24" role="doc-backlink">Data-driven tests</a><a class="headerlink" href="#data-driven-tests" title="Permalink to this heading">¶</a></h3>
+<p>Quite often several test cases are otherwise similar but they have slightly
+different input or output data. In these situations <em>data-driven tests</em>
+allows varying the test data without duplicating the workflow. With Robot
+Framework the <code class="code docutils literal notranslate"><span class="pre">[Template]</span></code> setting turns a test case into a data-driven test
+where the template keyword is executed using the data defined in the test case
+body:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Test Cases ***</span>
+<span class="gu">Invalid password</span>
+<span class="p">    [</span><span class="kn">Template</span><span class="p">]    </span><span class="nf">Creating user with invalid password should fail</span>
+<span class="p">    </span><span class="s">abCD5</span><span class="p">            ${</span><span class="nv">PWD INVALID LENGTH</span><span class="p">}</span>
+<span class="p">    </span><span class="s">abCD567890123</span><span class="p">    ${</span><span class="nv">PWD INVALID LENGTH</span><span class="p">}</span>
+<span class="p">    </span><span class="s">123DEFG</span><span class="p">          ${</span><span class="nv">PWD INVALID CONTENT</span><span class="p">}</span>
+<span class="p">    </span><span class="s">abcd56789</span><span class="p">        ${</span><span class="nv">PWD INVALID CONTENT</span><span class="p">}</span>
+<span class="p">    </span><span class="s">AbCdEfGh</span><span class="p">         ${</span><span class="nv">PWD INVALID CONTENT</span><span class="p">}</span>
+<span class="p">    </span><span class="s">abCD56+</span><span class="p">          ${</span><span class="nv">PWD INVALID CONTENT</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>In addition to using the <code class="code docutils literal notranslate"><span class="pre">[Template]</span></code> setting with individual tests, it would
+be possible to use the <code class="code docutils literal notranslate"><span class="pre">Test</span> <span class="pre">Template</span></code> setting once in the settings table like
+<a class="reference internal" href="#setups-and-teardowns">setups and teardowns</a> defined later in this guide. In our case that
+would ease creating separate named tests for invalid length password cases and
+for other invalid cases. However, that would require moving those tests to a
+separate file, because otherwise the template would also be applied to other
+tests in this file.</p>
+<p>Notice also that the error messages in the above example are specified using
+<a class="reference internal" href="#variables">variables</a>.</p>
+</section>
+</section>
+<section id="keywords">
+<h2><a class="toc-backref" href="#id25" role="doc-backlink">Keywords</a><a class="headerlink" href="#keywords" title="Permalink to this heading">¶</a></h2>
+<p>Test cases are created from keywords that can come from two sources. <a class="reference internal" href="#library-keywords">Library
+keywords</a> come from imported test libraries, and so called <a class="reference internal" href="#user-keywords">user keywords</a>
+can be created using the same tabular syntax that is used for creating test
+cases.</p>
+<section id="library-keywords">
+<h3><a class="toc-backref" href="#id26" role="doc-backlink">Library keywords</a><a class="headerlink" href="#library-keywords" title="Permalink to this heading">¶</a></h3>
+<p>All lowest level keywords are defined in test libraries which are implemented
+using standard programming languages, typically Python or Java. Robot Framework
+comes with a handful of <a class="reference external" href="http://robotframework.org/#libraries">test libraries</a> that can be divided to <em>standard
+libraries</em>, <em>external libraries</em> and <em>custom libraries</em>. <a class="reference external" href="http://robotframework.org/robotframework/#standard-libraries">Standard libraries</a>
+are distributed with the core framework and included generic libraries such as
+<code class="code docutils literal notranslate"><span class="pre">OperatingSystem</span></code>, <code class="code docutils literal notranslate"><span class="pre">Screenshot</span></code> and <code class="code docutils literal notranslate"><span class="pre">BuiltIn</span></code>, which is special because its
+keywords are available automatically. External libraries, such as
+<a class="reference external" href="https://github.com/rtomac/robotframework-selenium2library/#readme">Selenium2Library</a> for web testing, must be installed separately. If available
+test libraries are not enough, it is easy to <a class="reference internal" href="#creating-test-libraries">create custom test libraries</a>.</p>
+<p>To be able to use keywords provided by a test library, the keywords must be
+imported using the <code class="code docutils literal notranslate"><span class="pre">Library</span></code> setting. Tests in this guide need keywords from
+the standard <code class="code docutils literal notranslate"><span class="pre">OperatingSystem</span></code> library (e.g. <code class="code docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">File</span></code>) and from a custom
+made <code class="code docutils literal notranslate"><span class="pre">LoginLibrary</span></code> (e.g.  <code class="code docutils literal notranslate"><span class="pre">Attempt</span> <span class="pre">to</span> <span class="pre">login</span> <span class="pre">with</span> <span class="pre">credentials</span></code>). Both of these
+libraries are imported in the settings table below:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span>
+<span class="kn">Library</span><span class="p">           </span><span class="nn">OperatingSystem</span>
+<span class="kn">Library</span><span class="p">           </span><span class="nn">lib/LoginLibrary.py</span>
+</pre></div>
+</div>
+</section>
+<section id="user-keywords">
+<h3><a class="toc-backref" href="#id27" role="doc-backlink">User keywords</a><a class="headerlink" href="#user-keywords" title="Permalink to this heading">¶</a></h3>
+<p>One of the most powerful features of Robot Framework is the ability to easily
+create new, higher-level keywords from other keywords. The syntax for creating
+these so called <em>user-defined keywords</em>, or <em>user keywords</em> for short, is
+similar to the syntax that is used for creating test cases. All the
+higher-level keywords needed in previous test cases are created in this
+keyword table:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Keywords ***</span>
+<span class="gu">Clear login database</span>
+<span class="p">    </span><span class="nf">Remove file</span><span class="p">    ${</span><span class="nv">DATABASE FILE</span><span class="p">}</span>
+
+<span class="gu">Create valid user</span>
+<span class="p">    [</span><span class="kn">Arguments</span><span class="p">]    ${</span><span class="nv">username</span><span class="p">}    ${</span><span class="nv">password</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Create user</span><span class="p">    ${</span><span class="nv">username</span><span class="p">}    ${</span><span class="nv">password</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Status should be</span><span class="p">    </span><span class="s">SUCCESS</span>
+
+<span class="gu">Creating user with invalid password should fail</span>
+<span class="p">    [</span><span class="kn">Arguments</span><span class="p">]    ${</span><span class="nv">password</span><span class="p">}    ${</span><span class="nv">error</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Create user</span><span class="p">    </span><span class="s">example</span><span class="p">    ${</span><span class="nv">password</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Status should be</span><span class="p">    </span><span class="s">Creating user failed: </span><span class="p">${</span><span class="nv">error</span><span class="p">}</span>
+
+<span class="gu">Login</span>
+<span class="p">    [</span><span class="kn">Arguments</span><span class="p">]    ${</span><span class="nv">username</span><span class="p">}    ${</span><span class="nv">password</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Attempt to login with credentials</span><span class="p">    ${</span><span class="nv">username</span><span class="p">}    ${</span><span class="nv">password</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Status should be</span><span class="p">    </span><span class="s">Logged In</span>
+
+<span class="c"># Keywords below used by higher level tests. Notice how given/when/then/and</span>
+<span class="c"># prefixes can be dropped. And this is a comment.</span>
+
+<span class="gu">A user has a valid account</span>
+<span class="p">    </span><span class="nf">Create valid user</span><span class="p">    ${</span><span class="nv">USERNAME</span><span class="p">}    ${</span><span class="nv">PASSWORD</span><span class="p">}</span>
+
+<span class="gu">She changes her password</span>
+<span class="p">    </span><span class="nf">Change password</span><span class="p">    ${</span><span class="nv">USERNAME</span><span class="p">}    ${</span><span class="nv">PASSWORD</span><span class="p">}    ${</span><span class="nv">NEW PASSWORD</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Status should be</span><span class="p">    </span><span class="s">SUCCESS</span>
+
+<span class="gu">She can log in with the new password</span>
+<span class="p">    </span><span class="nf">Login</span><span class="p">    ${</span><span class="nv">USERNAME</span><span class="p">}    ${</span><span class="nv">NEW PASSWORD</span><span class="p">}</span>
+
+<span class="gu">She cannot use the old password anymore</span>
+<span class="p">    </span><span class="nf">Attempt to login with credentials</span><span class="p">    ${</span><span class="nv">USERNAME</span><span class="p">}    ${</span><span class="nv">PASSWORD</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Status should be</span><span class="p">    </span><span class="s">Access Denied</span>
+</pre></div>
+</div>
+<p>User-defined keywords can include actions defined by other user-defined or
+library keywords. As you can see from this example, user-defined keywords can
+take parameters. They can also return values and even contain FOR loops. For
+now, the important thing to know is that user-defined keywords enable test
+creators to create reusable steps for common action sequences. User-defined
+keywords can also help the test author keep the tests as readable as possible
+and use appropriate abstraction levels in different situations.</p>
+</section>
+</section>
+<section id="variables">
+<h2><a class="toc-backref" href="#id28" role="doc-backlink">Variables</a><a class="headerlink" href="#variables" title="Permalink to this heading">¶</a></h2>
+<section id="defining-variables">
+<h3><a class="toc-backref" href="#id29" role="doc-backlink">Defining variables</a><a class="headerlink" href="#defining-variables" title="Permalink to this heading">¶</a></h3>
+<p>Variables are an integral part of the Robot Framework. Usually any data used in
+tests that is subject to change is best defined as variables. Syntax for
+variable definition is quite simple, as seen in this variable table:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Variables ***</span>
+<span class="p">${</span><span class="nv">USERNAME</span><span class="p">}               </span><span class="s">janedoe</span>
+<span class="p">${</span><span class="nv">PASSWORD</span><span class="p">}               </span><span class="s">J4n3D0e</span>
+<span class="p">${</span><span class="nv">NEW PASSWORD</span><span class="p">}           </span><span class="s">e0D3n4J</span>
+<span class="p">${</span><span class="nv">DATABASE FILE</span><span class="p">}          ${</span><span class="nv">TEMPDIR</span><span class="p">}${</span><span class="nv">/</span><span class="p">}</span><span class="s">robotframework-quickstart-db.txt</span>
+<span class="p">${</span><span class="nv">PWD INVALID LENGTH</span><span class="p">}     </span><span class="s">Password must be 7-12 characters long</span>
+<span class="p">${</span><span class="nv">PWD INVALID CONTENT</span><span class="p">}    </span><span class="s">Password must be a combination of lowercase and uppercase letters and numbers</span>
+</pre></div>
+</div>
+<p>Variables can also be given from the command line which is useful if
+the tests need to be executed in different environments. For example
+this demo can be executed like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">robot</span> <span class="o">--</span><span class="n">variable</span> <span class="n">USERNAME</span><span class="p">:</span><span class="n">johndoe</span> <span class="o">--</span><span class="n">variable</span> <span class="n">PASSWORD</span><span class="p">:</span><span class="n">J0hnD0e</span> <span class="n">QuickStart</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
+</div>
+<p>In addition to user defined variables, there are some built-in variables that
+are always available. These variables include <code class="code docutils literal notranslate"><span class="pre">${TEMPDIR}</span></code> and <code class="code docutils literal notranslate"><span class="pre">${/}</span></code> which
+are used in the above example.</p>
+</section>
+<section id="using-variables">
+<h3><a class="toc-backref" href="#id30" role="doc-backlink">Using variables</a><a class="headerlink" href="#using-variables" title="Permalink to this heading">¶</a></h3>
+<p>Variables can be used in most places in the test data. They are most commonly
+used as arguments to keywords like the following test case demonstrates.
+Return values from keywords can also be assigned to variables and used later.
+For example, the following <code class="code docutils literal notranslate"><span class="pre">Database</span> <span class="pre">Should</span> <span class="pre">Contain</span></code> <a class="reference internal" href="#user-keywords">user keyword</a> sets
+database content to <code class="code docutils literal notranslate"><span class="pre">${database}</span></code> variable and then verifies the content
+using <a class="reference external" href="http://robotframework.org/robotframework/#standard-libraries">BuiltIn</a> keyword <code class="code docutils literal notranslate"><span class="pre">Should</span> <span class="pre">Contain</span></code>. Both library and user keywords can
+return values.</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Test Cases ***</span>
+<span class="gu">User status is stored in database</span>
+<span class="p">    [</span><span class="kn">Tags</span><span class="p">]    </span><span class="s">variables</span><span class="p">    </span><span class="s">database</span>
+<span class="p">    </span><span class="nf">Create Valid User</span><span class="p">    ${</span><span class="nv">USERNAME</span><span class="p">}    ${</span><span class="nv">PASSWORD</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Database Should Contain</span><span class="p">    ${</span><span class="nv">USERNAME</span><span class="p">}    ${</span><span class="nv">PASSWORD</span><span class="p">}    </span><span class="s">Inactive</span>
+<span class="p">    </span><span class="nf">Login</span><span class="p">    ${</span><span class="nv">USERNAME</span><span class="p">}    ${</span><span class="nv">PASSWORD</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Database Should Contain</span><span class="p">    ${</span><span class="nv">USERNAME</span><span class="p">}    ${</span><span class="nv">PASSWORD</span><span class="p">}    </span><span class="s">Active</span>
+
+<span class="gh">*** Keywords ***</span>
+<span class="gu">Database Should Contain</span>
+<span class="p">    [</span><span class="kn">Arguments</span><span class="p">]    ${</span><span class="nv">username</span><span class="p">}    ${</span><span class="nv">password</span><span class="p">}    ${</span><span class="nv">status</span><span class="p">}</span>
+<span class="p">    ${</span><span class="nv">database</span><span class="p">} =     </span><span class="nf">Get File</span><span class="p">    ${</span><span class="nv">DATABASE FILE</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Should Contain</span><span class="p">    ${</span><span class="nv">database</span><span class="p">}    ${</span><span class="nv">username</span><span class="p">}</span><span class="s">\t</span><span class="p">${</span><span class="nv">password</span><span class="p">}</span><span class="s">\t</span><span class="p">${</span><span class="nv">status</span><span class="p">}</span><span class="s">\n</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="organizing-test-cases">
+<h2><a class="toc-backref" href="#id31" role="doc-backlink">Organizing test cases</a><a class="headerlink" href="#organizing-test-cases" title="Permalink to this heading">¶</a></h2>
+<section id="test-suites">
+<h3><a class="toc-backref" href="#id32" role="doc-backlink">Test suites</a><a class="headerlink" href="#test-suites" title="Permalink to this heading">¶</a></h3>
+<p>Collections of test cases are called test suites in Robot Framework. Every
+input file which contains test cases forms a test suite. When <a class="reference internal" href="#executing-this-guide">executing this
+guide</a>, you see test suite <code class="code docutils literal notranslate"><span class="pre">QuickStart</span></code> in the console output. This name is
+derived from the file name and it is also visible in reports and logs.</p>
+<p>It is possible to organize test cases hierarchically by placing test case
+files into directories and these directories into other directories. All
+these directories automatically create higher level test suites that get their
+names from directory names. Since test suites are just files and directories,
+they are trivially placed into any version control system.</p>
+</section>
+<section id="setups-and-teardowns">
+<h3><a class="toc-backref" href="#id33" role="doc-backlink">Setups and teardowns</a><a class="headerlink" href="#setups-and-teardowns" title="Permalink to this heading">¶</a></h3>
+<p>If you want certain keywords to be executed before or after each test,
+use the <code class="code docutils literal notranslate"><span class="pre">Test</span> <span class="pre">Setup</span></code> and <code class="code docutils literal notranslate"><span class="pre">Test</span> <span class="pre">Teardown</span></code> settings in the settings table.
+Similarly you can use the <code class="code docutils literal notranslate"><span class="pre">Suite</span> <span class="pre">Setup</span></code> and <code class="code docutils literal notranslate"><span class="pre">Suite</span> <span class="pre">Teardown</span></code> settings to
+specify keywords to be executed before and/or after an entire test suite.</p>
+<p>Individual tests can also have a custom setup or teardown by using <code class="code docutils literal notranslate"><span class="pre">[Setup]</span></code>
+and <code class="code docutils literal notranslate"><span class="pre">[Teardown]</span></code> in the test case table. This works the same way as
+<code class="code docutils literal notranslate"><span class="pre">[Template]</span></code> was used earlier with <a class="reference internal" href="#data-driven-tests">data-driven tests</a>.</p>
+<p>In this demo we want to make sure the database is cleared before execution
+starts and that every test also clears it afterwards:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span>
+<span class="kn">Suite Setup</span><span class="p">       </span><span class="nf">Clear Login Database</span>
+<span class="kn">Test Teardown</span><span class="p">     </span><span class="nf">Clear Login Database</span>
+</pre></div>
+</div>
+</section>
+<section id="using-tags">
+<h3><a class="toc-backref" href="#id34" role="doc-backlink">Using tags</a><a class="headerlink" href="#using-tags" title="Permalink to this heading">¶</a></h3>
+<p>Robot Framework allows setting tags for test cases to give them free metadata.
+Tags can be set for all test cases in a file with <code class="code docutils literal notranslate"><span class="pre">Force</span> <span class="pre">Tags</span></code> and <code class="code docutils literal notranslate"><span class="pre">Default</span>
+<span class="pre">Tags</span></code> settings like in the table below. It is also possible to define tags
+for a single test case using <code class="code docutils literal notranslate"><span class="pre">[Tags]</span></code> settings like in <a class="reference internal" href="#using-variables">earlier</a> <code class="code docutils literal notranslate"><span class="pre">User</span>
+<span class="pre">status</span> <span class="pre">is</span> <span class="pre">stored</span> <span class="pre">in</span> <span class="pre">database</span></code> test.</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span>
+<span class="kn">Force Tags</span><span class="p">        </span><span class="s">quickstart</span>
+<span class="kn">Default Tags</span><span class="p">      </span><span class="s">example</span><span class="p">    </span><span class="s">smoke</span>
+</pre></div>
+</div>
+<p>When you look at a report after test execution, you can see that tests have
+specified tags associated with them and there are also statistics generated
+based on tags. Tags can also be used for many other purposes, one of the most
+important being the possibility to select what tests to execute. You can try,
+for example, the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">robot</span> <span class="o">--</span><span class="n">include</span> <span class="n">smoke</span> <span class="n">QuickStart</span><span class="o">.</span><span class="n">rst</span>
+<span class="n">robot</span> <span class="o">--</span><span class="n">exclude</span> <span class="n">database</span> <span class="n">QuickStart</span><span class="o">.</span><span class="n">rst</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="creating-test-libraries">
+<h2><a class="toc-backref" href="#id35" role="doc-backlink">Creating test libraries</a><a class="headerlink" href="#creating-test-libraries" title="Permalink to this heading">¶</a></h2>
+<p>Robot Framework offers a simple API for creating test libraries using either
+Python or Java, and the remote library interface also allows using other
+programming languages. <a class="reference external" href="http://robotframework.org/robotframework/#user-guide">Robot Framework User Guide</a> contains a detailed
+description about the library API.</p>
+<p>As an example, we can take a look at the <code class="code docutils literal notranslate"><span class="pre">LoginLibrary</span></code> test library used in
+this demo. The library is located at <a class="reference external" href="lib/LoginLibrary.py">lib/LoginLibrary.py</a>, and its source
+code is also copied below. Looking at the code you can see, for example, how
+the keyword <code class="code docutils literal notranslate"><span class="pre">Create</span> <span class="pre">User</span></code> is mapped to actual implementation of the method
+<code class="code docutils literal notranslate"><span class="pre">create_user</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+
+<span class="k">class</span> <span class="nc">LoginLibrary</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sut_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span>
+                                      <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;sut&#39;</span><span class="p">,</span> <span class="s1">&#39;login.py&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_status</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_run_command</span><span class="p">(</span><span class="s1">&#39;create&#39;</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">change_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">old_pwd</span><span class="p">,</span> <span class="n">new_pwd</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_run_command</span><span class="p">(</span><span class="s1">&#39;change-password&#39;</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">old_pwd</span><span class="p">,</span> <span class="n">new_pwd</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">attempt_to_login_with_credentials</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_run_command</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">status_should_be</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expected_status</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">expected_status</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_status</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="s2">&quot;Expected status to be &#39;</span><span class="si">%s</span><span class="s2">&#39; but was &#39;</span><span class="si">%s</span><span class="s2">&#39;.&quot;</span>
+                                 <span class="o">%</span> <span class="p">(</span><span class="n">expected_status</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_status</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">_run_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">command</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="p">[</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sut_path</span><span class="p">,</span> <span class="n">command</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+        <span class="n">process</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
+                                   <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">STDOUT</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_status</span> <span class="o">=</span> <span class="n">process</span><span class="o">.</span><span class="n">communicate</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to DocsTest’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, sezer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
