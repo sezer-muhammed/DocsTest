@@ -9,7 +9,7 @@ from DocsTest.Objects import BaseObject
         # Test case 1: Valid parameters
         ({
             'name': 'test',
-            'type': 'test',
+            'object_type': 'test',
             'age': 1,
             'missing_age': 1,
             'position_x': 1.0,
@@ -23,7 +23,7 @@ from DocsTest.Objects import BaseObject
             'scale_z': 1.0
         }, {
             'name': 'test',
-            'type': 'test',
+            'object_type': 'test',
             'age': 1,
             'missing_age': 1,
             'position_x': 1.0,
