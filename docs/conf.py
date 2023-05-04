@@ -10,15 +10,14 @@ import sys
 import sphinx_rtd_theme
 from pathlib import Path
 
-def add_package_and_subfolders_to_path(package_path: Path):
-    abs_package_path = os.path.abspath(package_path)
-    sys.path.insert(0, abs_package_path)
-    for child_path in package_path.iterdir():
-        if child_path.is_dir() and (child_path / '__init__.py').exists():
-            add_package_and_subfolders_to_path(child_path)
+docs_path = Path(__file__).parent
+project_path = docs_path.parent
 
-your_package_path = Path('../DocsTest')
-add_package_and_subfolders_to_path(your_package_path)
+sys.path.insert(0, str(project_path.resolve()))
+
+for child_path in project_path.glob('**/'):
+    if child_path.is_dir() and (child_path / '__init__.py').exists():
+        sys.path.insert(0, str(child_path.resolve()))
 
 project = 'DocsTest'
 copyright = '2023, sezer'
