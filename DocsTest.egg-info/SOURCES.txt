@@ -9,6 +9,8 @@ DocsTest.egg-info/SOURCES.txt
 DocsTest.egg-info/dependency_links.txt
 DocsTest.egg-info/requires.txt
 DocsTest.egg-info/top_level.txt
+DocsTest/helpers/__init__.py
+DocsTest/helpers/number_generator.py
 tests/__init__.py
 tests/test_object.py
 tests/test_optimizer.py

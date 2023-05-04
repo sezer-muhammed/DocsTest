@@ -119,6 +119,5 @@ class BaseObject:
         self.scale_z = parameters.get("scale_z", self.scale_z)
 
     def predict(self):
-        """To be added
-        """
+        """To be added"""
         raise NotImplementedError("Will be added later")

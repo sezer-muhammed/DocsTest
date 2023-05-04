@@ -10,8 +10,8 @@ Welcome to DocsTest's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   DocsTest
-   quickstart
+   all_modules
+   RC Plane v1
 
 
 

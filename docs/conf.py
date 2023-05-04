@@ -8,7 +8,17 @@
 import os
 import sys
 import sphinx_rtd_theme
-sys.path.insert(0, os.path.abspath('../'))
+from pathlib import Path
+
+def add_package_and_subfolders_to_path(package_path: Path):
+    sys.path.insert(0, str(package_path.resolve()))
+    print(f"{package_path} Found in Paths")
+    for child_path in package_path.iterdir():
+        if child_path.is_dir() and (child_path / '__init__.py').exists():
+            add_package_and_subfolders_to_path(child_path)
+
+your_package_path = Path('../DocsTest')
+add_package_and_subfolders_to_path(your_package_path)
 
 project = 'DocsTest'
 copyright = '2023, sezer'
@@ -18,7 +28,7 @@ release = '2023'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx.ext.autodoc','sphinx.ext.napoleon',]
+extensions = ['sphinx.ext.autodoc','sphinx.ext.napoleon', 'sphinx.ext.autosummary',]
 
 
 napoleon_google_docstring = True
