@@ -17,7 +17,7 @@ def add_package_and_subfolders_to_path(package_path: Path):
         if child_path.is_dir() and (child_path / '__init__.py').exists():
             add_package_and_subfolders_to_path(child_path)
 
-your_package_path = Path('../DocsTest')
+your_package_path = Path('../../DocsTest')
 add_package_and_subfolders_to_path(your_package_path)
 
 project = 'DocsTest'
