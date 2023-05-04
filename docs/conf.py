@@ -11,7 +11,8 @@ import sphinx_rtd_theme
 from pathlib import Path
 
 def add_package_and_subfolders_to_path(package_path: Path):
-    sys.path.insert(0, str(package_path.resolve()))
+    abs_package_path = os.path.abspath(package_path)
+    sys.path.insert(0, abs_package_path)
     print(f"{package_path} Found in Paths")
     for child_path in package_path.iterdir():
         if child_path.is_dir() and (child_path / '__init__.py').exists():
